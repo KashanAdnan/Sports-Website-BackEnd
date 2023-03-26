@@ -33,8 +33,8 @@ app.use("/", AdminRoute);
 
 app.use(ErrorMiddleware);
 
-const server = app.listen(3000, () => {
-  console.log(`Server is Listing on Port 3000`.yellow);
+const server = app.listen(process.env.PORT, () => {
+  console.log(`Server is Running`.yellow);
 });
 
 process.on("unhandledRejection", (err) => {
